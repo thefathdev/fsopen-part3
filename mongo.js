@@ -21,7 +21,7 @@ const Person = mongoose.model('Person', personSchema)
 if (process.argv.length === 3) {
   mongoose
     .connect(url)
-    .then((result) => {
+    .then(() => {
       return Person.find()
     })
     .then((result) => {
@@ -38,7 +38,7 @@ if (process.argv.length === 3) {
 
   mongoose
     .connect(url)
-    .then((result) => {
+    .then(() => {
       const person = new Person({
         name: personName,
         number: personNumber,
